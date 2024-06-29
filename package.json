@@ -1,0 +1,33 @@
+{
+  "name": "git-versioning",
+  "version": "0.0.0-dev.0",
+  "description": "",
+  "main": "index.js",
+  "packageManager": "pnpm@9.1.2",
+  "package-manager-strict": false,
+  "scripts": {
+    "prepare": "run-s prepare:*",
+    "prepare:husky": "husky install",
+    "prepare:git": "git config pull.rebase false",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier --write --ignore-unknown ."
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "npm-run-all2": "^6.2.0",
+    "prettier": "^3.3.2",
+    "tsx": "^4.16.0",
+    "type-fest": "^4.20.1",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "rxjs": "^7.8.1",
+    "semver": "^7.6.2",
+    "simple-git": "^3.25.0"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  }
+}
